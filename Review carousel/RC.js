@@ -1,8 +1,9 @@
-pictures = document.getElementById('picture');
-names = document.getElementById('name');
-jobs = document.getElementById('job');
-descriptions = document.getElementById('description');
-
+let pictures = document.getElementById('picture');
+let names = document.getElementById('name');
+let jobs = document.getElementById('job');
+let descriptions = document.getElementById('description');
+let num = 0;
+let people;
 
 const person1 = {
     Picture: "person/person-1.jpg",
@@ -32,17 +33,21 @@ const person4 = {
     Description:"Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic.",
 };
 
-let num = 0;
 people = [person1,person2,person3,person4];
 
-
-function next(){
-    num = (num+1)%4;
+function print(num){
     names.innerHTML = people[num].Name;
     jobs.innerHTML = people[num].Job;
     descriptions.innerHTML = people[num].Description;
     pictures.src = people[num].Picture;
 }
+
+
+function next(){
+    num = (num+1)%4;
+    print(num);
+}
+
 
 function previous(){
     if(num < 1){
@@ -50,18 +55,12 @@ function previous(){
     }else{
         num = (num-1);
     }
-    names.innerHTML = people[num].Name;
-    jobs.innerHTML = people[num].Job;
-    descriptions.innerHTML = people[num].Description;
-    pictures.src = people[num].Picture;
+    print(num);
 }
+
 
 function random(){
     num = Math.floor(Math.random() * 4);
     console.log(num);
-
-    names.innerHTML = people[num].Name;
-    jobs.innerHTML = people[num].Job;
-    descriptions.innerHTML = people[num].Description;
-    pictures.src = people[num].Picture;
+    print(num);
 }

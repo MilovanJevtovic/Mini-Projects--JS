@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <title>Navbar</title>
+</head>
+<body>
+    
+    <div class="main">
+        <div class="shadow">
+            <h1>Coding <span style="color:#49A6EA">Addict</span></h1>
+        </div>
+
+        <div class="buttons">
+            <button>Home</button>
+            <button>About</button>
+            <button>Projects</button>
+            <button>Contact</button>
+        </div>
+
+        <div class="icons">
+            <img src="icons/facebook.png" alt="">
+            <img src="icons/instagram.png" alt="">
+            <img src="icons/reddit.png" alt="">
+            <img src="icons/whatsapp.png" alt="">
+            <img src="icons/youtube.png" alt="">
+        </div>
+
+        <div class="hamburger" onclick="dropdown()">
+            <img src="icons/hamburger.png" alt="">
+        </div>
+
+    </div>
+
+    <div class="dropDownMenu" id="dropDownMenu">
+        <ul class="ule" id="ule">
+            <li>Home</li>
+            <li>About</li>
+            <li>Projects</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <script src="navbar.js"></script>
+
+</body>
+</html>
